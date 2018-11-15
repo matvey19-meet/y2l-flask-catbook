@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+.btn {
+    border: none;
+    background-color: inherit;
+
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* On mouse-over */
+.btn:hover {background: #eee;}
+.vote{color: blue}
+</style>
 </head>
 <body>
-    <a>Vote for {{cat.name}}</a>
+    <a class="btn vote" href="https://youtu.be/dQw4w9WgXcQ?t=84"> Vote for {{cat.name}}</a>
+
 </body>
 </html>

@@ -19,10 +19,11 @@
   <!--Navbar-->
   <nav class="navbar navbar-dark fb-color">
     <a class="text-logo navbar-brand">Catbook</a>
-    <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+    <form class="form-inline" method="POST">
+      <input class="form-control mr-sm-2" type="search" name='search' placeholder="Search FOR THEM">
       <button class="btn btn-outline-light" type="submit">Search</button>
     </form>
+    <a style="color: ghostwhite " href="cats/add">Add New Cat</a>
   </nav>
   <!--Navbar End-->
   <img class="header_img mx-auto d-block" src="{{url_for('static', filename='images/catbook_logo.jpg')}}">
