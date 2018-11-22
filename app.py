@@ -10,15 +10,21 @@ def catbook_home():
     if request.method=='GET':
         cats = get_all_cats()
         return render_template("home.html", cats=cats)
-    else:
-        name=request.form['search']
+    else: 
+        name=request.form['search')
         cat=search(name)
-        return redirect(url_for('cb_dts',cat.id))
+        # if(cat==NoneType):
+        #     return render_template("error.html")
+        # else:
+        return redirect(url_for('cb_dts', cat_id=cat.id))
 
-@app.route('/cats/<int:cat_id>')
+@app.route('/cats/<int:cat_id>', methods=['GET','POST'])
 def cb_dts(cat_id):
-    cat = get_cat(cat_id)
-    return render_template("cat.html", cat=cat)
+    if request.method=='GET'
+        cat = get_cat(cat_id)
+        return render_template("cat.html", cat=cat)
+    else:
+        addVote(cat_id)
 @app.route('/cats/add', methods=['GET','POST'])
 def add_cat():
     if request.method=='GET':

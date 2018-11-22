@@ -21,5 +21,8 @@ def get_cat(cat_id):
     cat= session.query(Cat).filter_by(id=cat_id).one()
     return cat
 def search(name):
-    cat=session.query(Cat).filter_by(name=name).one()
+    cat=session.query(Cat).filter_by(name=name).first()
     return cat
+def addVote(cat_id):
+    cat= session.query(Cat).filter_by(id=cat_id).one()
+    cat.votes=cat.votes+1
